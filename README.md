@@ -1,1 +1,0 @@
-# KNC-Machinery-Portfolio-Website
