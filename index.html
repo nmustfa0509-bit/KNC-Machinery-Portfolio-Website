@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNC Machinery - Home</title>
+
+    <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F3F7FA;
+    color: #263B4D;
+    }
+    header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    }
+    .logo h1{
+    color: #07365B;
+    font-size: 26px;
+    }
+    .logo p{
+    font-size: 12px;
+    color: #263B4D;
+    }
+   .search input {
+    width: 300px;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    }
+    .search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #DCEAF5;
+    border-radius: 30px;
+    background-color: white;
+    padding: 5px;
+    transition: 0.3s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+    .search button {
+    background-color: #0876BD;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    } 
+    .search button:hover {
+    background-color: #07365B;
+    transform: scale(1.05);
+    }
+    .search:focus-within {
+    border-color: #0876BD;
+    box-shadow: 0 0 8px rgba(8, 118, 189, 0.2);
+    }  
+    .inquiry-button {
+    display: inline-block;
+    background-color: #0876BD;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    .inquiry-button:hover {
+    background-color: #07365B;
+    transform: scale(1.05);
+    }
+    nav{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:12px;
+    background-color: #07365B;
+    text-decoration:none;
+     position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+    nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    nav a:hover {
+    color: #DCEAF5;
+    text-decoration: underline;
+    }
+    main {
+    padding: 0;
+    }
+    .hero-section {
+    display: flex;
+    align-items: center;
+    min-height: 350px;
+    background: linear-gradient(110deg, #F4FAFE, #EAF5FC, #F7FBFE);
+    overflow: hidden;
+    margin-bottom: 0px;
+    }
+    .hero-text {
+    flex: 0.8;
+    padding: 30px;
+    }
+    .hero-text h1 {
+    color: #07365B;
+    font-size: 32px;
+    margin-bottom: 12px;
+    }
+    .hero-text h3 {
+    color: #0876BD;
+    margin-bottom: 12px;
+    }
+    .hero-text p {
+    color: #263B4D;
+    line-height: 1.7;
+    }
+    .hero-image-container {
+    flex: 1.4;
+    height: 380px;
+    }
+    .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    mask-image: linear-gradient(to right, transparent, black 15%);
+    }
+    .hero-section {
+    border-bottom: 1px solid #D5E5F0;
+    }
+    main section:not(.hero-section):not(.highlights) {
+        padding: 65px 8%;
+    }
+    .section-heading {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .section-heading h2 {
+        color: #07365B;
+        font-size: 30px;
+        margin-bottom: 12px;
+    }
+    .section-heading p {
+        color: #687987;
+        line-height: 1.7;
+    }
+/* OFFICIAL STORE BANNER */
+.store-banner {
+    background-color: #EAF2F8;
+    text-align: center;
+    padding: 18px;
+    border-bottom: 1px solid #C9DCEB;
+}
+
+.store-banner a {
+    display: inline-block;
+    color: #07365B;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.store-banner a:hover {
+    color: #0876BD;
+    text-decoration: underline;
+}
+
+.store-banner p {
+    color: #526575;
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+    /*highlights*/
+    .highlights {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        padding: 30px 5%;
+        border-bottom: 1px solid #DCE3E9;
+    }
+    .highlight {
+        text-align: center;
+        padding: 10px 20px;
+        flex: 1;
+        border-right: 1px solid #DCE3E9;
+    }
+    .highlight:last-child {
+        border-right: none;
+    }
+    .highlight h3 {
+        color: #07365B;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .highlight p {
+        color: #687987;
+        font-size: 13px;
+    }
+
+    /*our solutions*/
+    .solutions {
+        background-color: #F5F7F9;
+    }
+    .solution-container {
+        display: flex;
+        gap: 20px;
+    }
+    .solution-box {
+        flex: 1;
+        background-color: white;
+        border: 1px solid #DCE3E9;
+        padding: 25px;
+        border-bottom: 3px solid #0876BD;
+        transition: 0.3s;
+    }
+    .solution-box:hover {
+        border-color: #0876BD;
+    }
+    .solution-box h3 {
+        color: #07365B;
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+    .solution-box p {
+        color: #687987;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+    .solution-box a {
+        display: inline-block;
+        color: #0876BD;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 18px;
+        font-size: 14px;
+    }
+
+    /*machine*/
+    .machinery-section {
+        background-color: white;
+    }
+    .machine-content {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+    }
+    .machine-image {
+        flex: 1;
+    }
+    .machine-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .machine-text {
+        flex: 1;
+    }
+    .machine-text h2 {
+        color: #07365B;
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+    .machine-text p {
+        color: #687987;
+        line-height: 1.9;
+        margin-bottom: 15px;
+    }
+    .machine-text ul {
+        padding-left: 20px;
+        line-height: 2;
+        color: #526575;
+    }
+
+    /*about*/
+    .about-section {
+        background-color: #EAF2F8;
+        text-align: center;
+    }
+    .about-section h2 {
+        color: #07365B;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .about-section p {
+        max-width: 850px;
+        margin: 0 auto 15px;
+        line-height: 1.9;
+        color: #526575;
+    }
+
+    /*induestries*/
+    .industries-section {
+        background-color: white;
+    }
+    .industry-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .industry-box {
+        width: 30%;
+        padding: 22px;
+        text-align: center;
+        background-color: #F5F7F9;
+        border: 1px solid #DCE3E9;
+        color: #07365B;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .industry-box:hover {
+        background-color: #EAF2F8;
+        border-color: #0876BD;
+    }
+
+    /*process*/
+    .process-section {
+        background-color: #F5F7F9;
+    }
+    .process-container {
+        display: flex;
+        gap: 20px;
+    }
+    .process-box {
+        flex: 1;
+        background-color: white;
+        padding: 25px;
+        border: 1px solid #DCE3E9;
+    }
+    .process-box h3 {
+        color: #0876BD;
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .process-box p {
+        color: #687987;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        background-color: #EAF2F8;
+        text-align: center;
+    }
+    .contact-section h2 {
+        color: #07365B;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .contact-section p {
+        color: #526575;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+/* FOOTER */
+footer {
+    background-color: #07365B;
+    color: white;
+    padding: 35px 8% 15px;
+    margin-top: 40px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.footer-content div {
+    flex: 1 1 220px;
+}
+.footer-content h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+.footer-content p {
+    color: #DCEAF5;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.footer-content a {
+    color: #DCEAF5;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-content a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #52718A;
+    margin-top: 25px;
+    padding-top: 12px;
+}
+.footer-bottom p {
+    font-size: 13px;
+    color: #DCEAF5;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+    <div class="logo">
+        <h1>KNC Machinery</h1>
+        <p>Machines | Parts | Accessories</p>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search machines, parts, accessories...">
+        <button>Search</button>
+    </div>
+     <a href="register.html" class="inquiry-button">Send an Inquiry</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> 
+        <a href="media.html">Media and Information</a> 
+        <a href="register.html">Register</a>
+        <a href="aboutus.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="helpus.html">Contact us</a>
+    </nav>
+
+    <main>
+       <section class="hero-section">
+    <div class="hero-text">
+        <h1>Welcome to KNC Machinery</h1>
+        <h3>Powering Industries with Smart Machinery</h3>
+        <p>Explore reliable plastic injection moulding machines and industrial equipment for modern manufacturing. Your destination for plastic injection moulding machinery information and solutions.</p>
+    </div>
+    
+    <div class="hero-image-container">
+        <img class="main-image" src="images/img1.png" alt="Industrial plastic injection moulding machine">
+    </div>
+       </section>
+<div class="store-banner">
+    <a href="https://pakmachine.com.pk/service/knc-international-3" target="_blank">
+    VISIT KNC INTERNATIONAL STORE->
+    </a>
+    <p>Explore our machinery, spare parts and accessories.</p>
+</div>
+        <section class="highlights">
+            <div class="highlight">
+                <h3>Injection Machines</h3>
+                <p>Modern plastic moulding equipment</p>
+            </div>
+            <div class="highlight">
+                <h3>Machine Parts</h3>
+                <p>Essential machinery components</p>
+            </div>
+            <div class="highlight">
+                <h3>Accessories</h3>
+                <p>Additional industrial equipment</p>
+            </div>
+            <div class="highlight">
+                <h3>Customer Support</h3>
+                <p>Machinery information and enquiries</p>
+            </div>
+        </section>
+
+        <section class="solutions" id="solutions">
+            <div class="section-heading">
+                <h2>Our Solutions</h2>
+                <p> Explore machinery and equipment for different plastic manufacturing requirements.</p>
+            </div>
+            <div class="solution-container">
+                <div class="solution-box">
+                    <h3>Injection Moulding</h3>
+                    <p>Machines used to manufacture plastic products in different shapes and sizes through the
+                    injection moulding process. </p>
+                </div>
+                <div class="solution-box">
+                    <h3>Blow Moulding</h3>
+                    <p>Machinery designed for manufacturing hollow
+                        plastic products such as bottles and containers.</p>
+                </div>
+                <div class="solution-box">
+                    <h3>PET Blow Moulding</h3>
+                    <p> Equipment used in the production of PET
+                        bottles and other plastic packaging products. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="machinery-section">
+            <div class="machine-content">
+                <div class="machine-image">
+                    <img src="images/img1.png"
+                    alt="Industrial Injection Moulding Machine">
+                </div>
+
+                <div class="machine-text">
+                    <h2>Plastic Injection Moulding Machines</h2>
+                    <p>
+                        Injection moulding machines are used in
+                        manufacturing industries to produce plastic
+                        components by injecting heated plastic
+                        material into specially designed moulds.
+                    </p>
+                    <p>Our machinery categories include:</p>
+                    <ul>
+                        <li>Plastic Injection Moulding Machines</li>
+                        <li>Blow Moulding Machines</li>
+                        <li>PET Blow Moulding Machines</li>
+                        <li>CNC Industrial Machinery</li>
+                    </ul>
+                    <br>
+                    <a href="https://pakmachine.com.pk/service/knc-international-3" class="hero-button"
+                       target="_blank">View All Machinery</a> 
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <h2>About KNC Machinery</h2>
+            <p>
+                KNC Machinery is associated with
+                <strong>Nadeem Mustafa</strong> and focuses on
+                plastic injection moulding machinery and
+                industrial manufacturing equipment.
+            </p>
+            <p>
+                Our website provides information about different
+                machinery categories, machine components,
+                accessories and their applications in modern
+                manufacturing industries.
+            </p>
+        </section>
+
+        <section class="industries-section">
+            <div class="section-heading">
+                <h2>Industries We Serve</h2>
+                <p>
+                    Plastic moulding machinery supports the production
+                    of products used in many industries.
+                </p>
+            </div>
+            <div class="industry-container">
+                <div class="industry-box">
+                    Packaging Industry
+                </div>
+                <div class="industry-box">
+                    Automotive Industry
+                </div>
+                <div class="industry-box">
+                    Household Products
+                </div>
+                <div class="industry-box">
+                    Electrical Industry
+                </div>
+                <div class="industry-box">
+                    Construction Industry
+                </div>
+                <div class="industry-box">
+                    Manufacturing Industry
+                </div>
+            </div>
+        </section>
+    
+        <section class="process-section">
+            <div class="section-heading">
+                <h2>How It Works</h2>
+                <p>
+                    A simple process to explore machinery
+                    and submit your requirements.
+                </p>
+            </div>
+            <div class="process-container">
+                <div class="process-box">
+                    <h3>01. Explore</h3>
+                    <p>
+                        Browse different machinery categories
+                        and available equipment.
+                    </p>
+                </div>
+                <div class="process-box">
+                    <h3>02. Select</h3>
+                    <p>
+                        Choose the machine or equipment
+                        according to your requirements.
+                    </p>
+                </div>
+                <div class="process-box">
+                    <h3>03. Enquire</h3>
+                    <p>
+                        Submit your details and machinery
+                        requirements through our website.
+                    </p>
+                </div>
+                <div class="process-box">
+                    <h3>04. Connect</h3>
+                    <p>
+                        Get in touch with KNC Machinery
+                        for further information.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Looking for the Right Machinery?</h2>
+            <p>Contact KNC Machinery to share your requirements
+                and learn more about our industrial equipment.
+            </p>
+            <a href="register.html" class="hero-button">Send Your Enquiry</a>
+        </section>
+    </main>
+
+    
+<footer>
+    <div class="footer-content">
+        <div class="footer-about">
+            <h3>KNC Machinery</h3>
+            <p>
+                Plastic injection moulding machinery,
+                industrial equipment, spare parts and accessories.
+            </p>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Information</h3>
+            <p>Contact Person: Nadeem Mustafa</p>
+              <p>Email: <a href="mailto:knclhr@gmail.com" style="color: #DCEAF5; text-decoration: none;">knclhr@gmail.com</a></p>
+            <p>Phone: <a href="tel:+924236825167">042-36825167</a></p>
+            <p>Phone: <a href="tel:+924236825168">042-36825168</a></p>
+            <p>Address: Link Bhogiwal, Band Road,
+                Krol Ghati Stop, Lahore, Pakistan</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="media.html">Media and Information</a></p>
+            <p><a href="register.html">Register / Inquiry</a></p>
+            <p><a href="aboutus.html">About us</a></p>
+            <p>
+                <a href="https://pakmachine.com.pk/service/knc-international-3" target="_blank">
+                    Visit KNC International Store</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 KNC Machinery. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
